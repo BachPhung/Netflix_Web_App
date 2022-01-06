@@ -1,11 +1,12 @@
 import './Register.scss'
 import { useState } from 'react'
+import { Language } from '@material-ui/icons'
 export const Register = () => {
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
     const [click,setClick] = useState(false)
     const handleStart = () =>{
-        if(email.length !=0 && email.includes('@')){
+        if(email.length !==0 && email.includes('@')){
             setClick(true);
         }
     }
@@ -21,7 +22,16 @@ export const Register = () => {
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
                     alt="logo netflix"
                 />
+                <div className='right'>
+                
+                <select name='language' id='language'>
+                        <option>English</option>
+                        <option value="adventure">Soumi</option>
+                        <option value="comedy">Svenska</option>
+                    </select>
+                <Language className='icon-l'/>
                 <button className="loginButton">Sign In</button>
+                </div>
                 </div>
                 <div className="container">
                     <h1>Unlimited films, TV programmes and more.</h1>

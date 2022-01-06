@@ -4,12 +4,14 @@ import './app.scss'
 import { Home } from './pages/home/home';
 import { Watch } from './pages/watch/Watch'
 import {Register} from './pages/register/Register'
+import {Login} from'./pages/login/Login'
 function App() {
   return (
     <div>
     {/* <Home/> */}
     {/* <Watch/> */}
-    <Register/>
+    {/* <Register/> */}
+    <Login/>
     </div>
   );
 }
