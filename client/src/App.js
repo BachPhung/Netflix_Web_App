@@ -1,10 +1,16 @@
 
 import './App.css';
 import './app.scss'
-import { Home } from './home/home';
+import { Home } from './pages/home/home';
+import { Watch } from './pages/watch/Watch'
+import {Register} from './pages/register/Register'
 function App() {
   return (
-    <Home></Home>
+    <div>
+    {/* <Home/> */}
+    {/* <Watch/> */}
+    <Register/>
+    </div>
   );
 }
 
