@@ -1,6 +1,7 @@
 import './Register.scss'
 import { useState } from 'react'
 import { Language } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 export const Register = () => {
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
@@ -30,7 +31,9 @@ export const Register = () => {
                         <option value="comedy">Svenska</option>
                     </select>
                 <Language className='icon-l'/>
-                <button className="loginButton">Sign In</button>
+                <Link to='/login' className='link'>
+                    <button className="loginButton">Sign In</button>
+                </Link>
                 </div>
                 </div>
                 <div className="container">
