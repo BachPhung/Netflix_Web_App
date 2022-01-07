@@ -7,7 +7,7 @@ import {Register} from './pages/register/Register'
 import {Login} from'./pages/login/Login'
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 function App() {
-  const user = false;
+  const user = true;
   return (
     <div>
       <BrowserRouter>
