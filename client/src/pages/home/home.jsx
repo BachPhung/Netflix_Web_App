@@ -14,7 +14,7 @@ export const Home = ({type}) => {
                     genre ? "&genre=" + genre : ""
                   }`,{
                       headers:{
-                          token: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGEwMzE1ZTZjOTlhYjRlMDVkODRlNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MTY4MDcwNCwiZXhwIjoxNjQxOTM5OTA0fQ.jSUb4CVMLCCYVPQQqemyvypwflL92Qs0whAFg5V0uyo'
+                          authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGEwYjQxOTQ4YWU3ZTc0Mzk3MzQ5MSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDE2ODIwOTMsImV4cCI6MTY0MTk0MTI5M30.dFBefsBu3zCvvwU7m2vWAlkFstzJcE_mit7DWxm0o6M'
                       }
                   })
                 console.log(res.data)
@@ -35,7 +35,7 @@ export const Home = ({type}) => {
             <List/> */}
             {lists.map(list=>{
                 return(
-                    <List list={list}/>
+                    <List key={list._id} list={list}/>
                 )
             })}
         </div>

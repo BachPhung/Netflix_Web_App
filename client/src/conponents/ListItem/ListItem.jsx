@@ -10,8 +10,7 @@ export const ListItem = ({index}) => {
             <img src='https://occ-0-1500-1501.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdUD8qoiCBhdJveDffqttddjt72N-va2_0DgOiwhMw4SQ7pfIWv7zqFcDQwAuXYvlhv6tBwDuobkWFEtSybpH_QLLCMCs9UqB48NqyZVrweI3cwIzRxyjXQOaGzuCZOw3WbG3Hvi4NYY2akp-0PqGGIoGfA.webp?r=16b'/>
             {isHovered &&(
             <>
-             {/* <video src={trailer} autoPlay={true}/> */}
-             <ReactPlayer url={trailer} controls={false} playing width={'100%'} autoPlay height={'140px'} className='video'/>
+             <ReactPlayer url={trailer} controls={false} playing={false} width={'100%'} autoPlay={false} height={'140px'} className='video'/>
             <div className='itemInfo'>
                 <div className='icons'>
                     <PlayArrow className='icon'/>

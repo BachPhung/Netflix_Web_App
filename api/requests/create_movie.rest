@@ -3,13 +3,13 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGEwMzE1ZTZjOTlhYjRlMDVkODRlNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MTY4MDcwNCwiZXhwIjoxNjQxOTM5OTA0fQ.jSUb4CVMLCCYVPQQqemyvypwflL92Qs0whAFg5V0uyo
 
 {
-    "title":"Superman10",
+    "title":"Idiot11",
     "desc":"test desc",
-    "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F451063718935736511%2F&psig=AOvVaw13SB2piw0Pz706tiNjE6GM&ust=1641764210046000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCODB4LmOo_UCFQAAAAAdAAAAABAD",
-    "imgTitle":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nme.com%2Fnews%2Ffilm%2Fnew-superman-logo-revealed-for-man-of-steel-872163&psig=AOvVaw2iX0JnZEEXTUhU0Yn2LfzW&ust=1641764268002000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIi51tOOo_UCFQAAAAAdAAAAABAD",
-    "trailer":"https://www.youtube.com/watch?v=T6DJcgm3wNY",
-    "video":"https://www.youtube.com/watch?v=FaQQV9cWPEU",
+    "img":"https://images.cinemaexpress.com/uploads/user/imagelibrary/2020/5/1/original/3_Idiots.PNG",
+    "imgTitle":"https://image.pngaaa.com/499/3423499-middle.png",
+    "trailer":"https://www.youtube.com/watch?v=K0eDlFX9GMc",
+    "video":"https://www.youtube.com/watch?v=QaUaLruRP6Y",
     "year":"2010",
-    "limit":16,
-    "genre":"advenger science-fiction"
+    "limit":10,
+    "genre":"comedy"
 }

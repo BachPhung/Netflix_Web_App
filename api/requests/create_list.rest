@@ -1,0 +1,22 @@
+POST http://localhost:8800/api/lists
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGEwMzE1ZTZjOTlhYjRlMDVkODRlNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MTY4MDcwNCwiZXhwIjoxNjQxOTM5OTA0fQ.jSUb4CVMLCCYVPQQqemyvypwflL92Qs0whAFg5V0uyo
+
+{
+    "title": "Awesome Sci-fi Series 2",
+    "type": "series",
+    "genre": "sci-fi",
+    "content":[
+        "61da0f535733760a04bbd47d",
+        "61da0f5c5733760a04bbd47f",
+        "61da0f615733760a04bbd481",
+        "61da0f655733760a04bbd483",
+        "61da0f685733760a04bbd485",
+        "61da0f6b5733760a04bbd487",
+        "61da0f705733760a04bbd489",
+        "61da0f755733760a04bbd48b",
+        "61da0f795733760a04bbd48d",
+        "61da0f7d5733760a04bbd48f",
+        "61da0f815733760a04bbd491"
+    ]
+}
