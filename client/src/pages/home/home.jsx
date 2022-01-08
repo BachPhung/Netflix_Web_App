@@ -14,10 +14,11 @@ export const Home = ({type}) => {
                     genre ? "&genre=" + genre : ""
                   }`,{
                       headers:{
-                          token: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDFjNzc0ZjAwYTBjMGM3MWFlMzViYiIsImlkQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDE1Njc0ODAsImV4cCI6MTY0MTgyNjY4MH0.vkp5hkHBMQDwGnpTiIghGvhra6Zo8rkxSNqseSWCNP8'
+                          token: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGEwMzE1ZTZjOTlhYjRlMDVkODRlNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MTY4MDcwNCwiZXhwIjoxNjQxOTM5OTA0fQ.jSUb4CVMLCCYVPQQqemyvypwflL92Qs0whAFg5V0uyo'
                       }
                   })
                 console.log(res.data)
+                setLists(res.data)
             } catch(err){
                 console.log(err);
             }
@@ -28,10 +29,15 @@ export const Home = ({type}) => {
         <div className='home'>
             <Navbar/>
             <Feature type={type}/>
+            {/* <List/>
             <List/>
             <List/>
-            <List/>
-            <List/>
+            <List/> */}
+            {lists.map(list=>{
+                return(
+                    <List list={list}/>
+                )
+            })}
         </div>
     )
 }

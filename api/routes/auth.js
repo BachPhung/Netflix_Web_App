@@ -28,7 +28,7 @@ authRouter.post('/login',async (req,res)=>{
         const originalPassword = bytes.toString(CryptoJS.enc.Utf8);
         originalPassword !== req.body.password && res.status(401).json('Wrong password or username!')
         const accessToken = jwt.sign(
-            {id: user._id, idAdmin: user.isAdmin},
+            {id: user._id, isAdmin: user.isAdmin},
             process.env.SECRET_KEY,
             {expiresIn:'3d'}
         )
