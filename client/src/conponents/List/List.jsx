@@ -2,7 +2,7 @@ import { ArrowBackIosOutlined, ArrowForwardIosOutlined } from '@material-ui/icon
 import './List.scss'
 import { useLayoutEffect, useRef, useState } from 'react'
 import { ListItem } from '../ListItem/ListItem'
-export const List = () => {
+export const List = ({list}) => {
     const listRef = useRef()
     const [isMoved,setIsMoved]= useState(false)
     const [slideNumber, setSlideNumber] = useState(0)

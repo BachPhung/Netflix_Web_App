@@ -29,10 +29,6 @@ export const Home = ({type}) => {
         <div className='home'>
             <Navbar/>
             <Feature type={type}/>
-            {/* <List/>
-            <List/>
-            <List/>
-            <List/> */}
             {lists.map(list=>{
                 return(
                     <List key={list._id} list={list}/>
