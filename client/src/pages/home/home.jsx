@@ -29,7 +29,7 @@ export const Home = ({type}) => {
         <div className='home'>
             <Navbar/>
             <Feature type={type}/>
-            {lists.map(list=>{
+            {lists.length!==0 && lists.map(list=>{
                 return(
                     <List key={list._id} list={list}/>
                 )
