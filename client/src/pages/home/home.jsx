@@ -14,10 +14,9 @@ export const Home = ({type}) => {
                     genre ? "&genre=" + genre : ""
                   }`,{
                       headers:{
-                          authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGEwYjQxOTQ4YWU3ZTc0Mzk3MzQ5MSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDE2ODIwOTMsImV4cCI6MTY0MTk0MTI5M30.dFBefsBu3zCvvwU7m2vWAlkFstzJcE_mit7DWxm0o6M'
+                          authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGEwYjQxOTQ4YWU3ZTc0Mzk3MzQ5MSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDIwMDA3NDksImV4cCI6MTY0MjI1OTk0OX0.1WtMYU2xoz5qDJCqSgrRJLWe1PwMfIoo1YGI7fm8qNA'
                       }
                   })
-                console.log(res.data)
                 setLists(res.data)
             } catch(err){
                 console.log(err);

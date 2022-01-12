@@ -1,8 +1,10 @@
 import './Register.scss'
 import { useState } from 'react'
 import { Language } from '@material-ui/icons'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import axios from 'axios'
 export const Register = () => {
+    const history = useHistory()
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
     const [click,setClick] = useState(false)
@@ -11,8 +13,14 @@ export const Register = () => {
             setClick(true);
         }
     }
-    const handleFinish = () =>{
-
+    const handleFinish = async (e) =>{
+        try{
+            e.preventDefault()
+            await axios.post('http://localhost:8800/api/auth/register',{email,password,username:"Default name"})
+            history.push('/login')
+        } catch (err){
+            console.log(err);
+        }
     }
     return (
         <div className='register'>

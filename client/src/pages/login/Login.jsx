@@ -1,7 +1,16 @@
 import './Login.scss'
-
-import {Link} from 'react-router-dom'
+import { useState, useContext } from 'react';
+import {Link} from 'react-router-dom';
+import {AuthContext} from '../../context/AuthContext'
+import {login} from '../../context/apiCalls'
 export const Login = () => {
+    const [email,setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const {isFetching, dispatch} = useContext(AuthContext)
+    const handleLogin = (e) =>{
+      e.preventDefault();
+      login({email,password},dispatch)
+    }
     return (
       <div className="login">
         <div className="top">
@@ -16,9 +25,9 @@ export const Login = () => {
         <div className="container">
           <form>
             <h1>Sign In</h1>
-            <input type="email" placeholder="Email or phone number" />
-            <input type="password" placeholder="Password" />
-            <button className="loginButton">Sign In</button>
+            <input value={email} onChange={e=>setEmail(e.target.value)} type="email" placeholder="Email or phone number" />
+            <input value={password} onChange={e=>setPassword(e.target.value)} type="password" placeholder="Password" />
+            <button className="loginButton" onClick={handleLogin} disabled={isFetching}>Sign In</button>
             <Link to='register' className='link'>
               <span>
                 New to Netflix? <b>Sign up now.</b>

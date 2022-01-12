@@ -2,7 +2,8 @@ import { Add ,PlayArrow , ThumbDownOutlined, ThumbUpOutlined} from '@material-ui
 import ReactPlayer from 'react-player/youtube'
 import './ListItem.scss'
 import axios from 'axios'
-import { useState, useEffect, useRef, useLayoutEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 export const ListItem = ({index,item}) => {
     const playerRef = useRef();
     const [movieInfo, setMovieInfo] = useState({})
@@ -12,7 +13,7 @@ export const ListItem = ({index,item}) => {
         const getMovieInfo = async (id) =>{
             try {const res = await axios.get(`http://localhost:8800/api/movies/find/${id}`,{
                     headers:{
-                        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGEwYjQxOTQ4YWU3ZTc0Mzk3MzQ5MSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDE2ODIwOTMsImV4cCI6MTY0MTk0MTI5M30.dFBefsBu3zCvvwU7m2vWAlkFstzJcE_mit7DWxm0o6M'
+                        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGEwYjQxOTQ4YWU3ZTc0Mzk3MzQ5MSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDIwMDA3NDksImV4cCI6MTY0MjI1OTk0OX0.1WtMYU2xoz5qDJCqSgrRJLWe1PwMfIoo1YGI7fm8qNA'
                     }
                 })
                 setMovieInfo(res.data)
@@ -23,9 +24,8 @@ export const ListItem = ({index,item}) => {
         }
         getMovieInfo(item);
     },[item]) 
-    console.log(movieInfo);
-    console.log(genre);
     return (
+        <Link to={{pathname:'/watch',movie:movieInfo}}>
         <div style={{ left: isHovered && index * 225 - 10 + index * 2.5 }} className='listItem' onMouseEnter={()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}>
             <img src={movieInfo.img}/>
             {isHovered &&(
@@ -55,5 +55,6 @@ export const ListItem = ({index,item}) => {
             </>
             )}
         </div>
+        </Link>
     )
 }

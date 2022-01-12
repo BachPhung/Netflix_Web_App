@@ -59,7 +59,7 @@ listRoute.get("/", verify, async (req, res) => {
       }
       res.status(200).json(list);
     } catch (err) {
-      res.status(500).json(err);
+      res.status(501).json(err);
     }
   });
 module.exports = listRoute;

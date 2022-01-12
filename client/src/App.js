@@ -6,29 +6,36 @@ import { Watch } from './pages/watch/Watch'
 import {Register} from './pages/register/Register'
 import {Login} from'./pages/login/Login'
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
+import {useState, useEffect, useContext} from 'react'
+import { AuthContext } from './context/AuthContext';
 function App() {
-  const user = true;
+  const {user,dispatch} = useContext(AuthContext)
+  const [auth,setAuth] = useState(false)
+  console.log(user);
+  useEffect(()=>{
+    user ===null ? setAuth(false) : setAuth(true)
+  },[user,auth])
   return (
     <div>
       <BrowserRouter>
         <Switch>
           <Route exact path='/' >
-            {user? <Home/> : <Redirect to='register'/>}
+            {auth? <Home/> : <Redirect to='register'/>}
           </Route>
           <Route exact path='/movies'>
-            {user? <Home type='movies'/> : <Redirect to='register'/>}
+            {auth? <Home type='movies'/> : <Redirect to='register'/>}
           </Route>
           <Route exact path='/series'>
-            {user? <Home type='series'/> : <Redirect to='register'/>}
+            {auth? <Home type='series'/> : <Redirect to='register'/>}
           </Route>
           <Route exact path='/watch'>
-            {user? <Watch/> : <Redirect to='register'/>}
+            {auth? <Watch/> : <Redirect to='register'/>}
           </Route>
           <Route exact path='/register'>
-            {!user? <Register/> : <Redirect to='/'/>}
+            {!auth? <Register/> : <Redirect to='/'/>}
           </Route>
           <Route exact path='/login'>
-            {!user? <Login/> : <Redirect to='/'/>}
+            {!auth? <Login/> : <Redirect to='/'/>}
           </Route>
         </Switch>
       </BrowserRouter>

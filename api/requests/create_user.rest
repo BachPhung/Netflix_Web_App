@@ -2,8 +2,8 @@ POST http://localhost:8800/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "Quavdvvnvg Bach",
-    "email": "quanvvdbafvch@gmail.com",
+    "username": "Quavdvvddnvg Bach",
+    "email": "quanvvdbddavfvch@gmail.com",
     "password": "123456789",
     "isAdmin": "true"
 }
